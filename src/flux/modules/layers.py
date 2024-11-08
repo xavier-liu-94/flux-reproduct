@@ -533,6 +533,7 @@ class SingleStreamBlock(nn.Module):
         self.mlp_act = nn.GELU(approximate="tanh")
         self.modulation = Modulation(hidden_size, double=False)
 
+        # cut point for lora or IP-adapter
         processor = SingleStreamBlockProcessor()
         self.set_processor(processor)
 

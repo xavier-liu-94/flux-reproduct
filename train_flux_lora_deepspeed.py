@@ -258,7 +258,7 @@ def main():
                 x_t = (1 - t) * x_1 + t * x_0
                 bsz = x_1.shape[0]
                 guidance_vec = torch.full((x_t.shape[0],), 1, device=x_t.device, dtype=x_t.dtype)
-
+                # check here
                 # Predict the noise residual and compute loss
                 model_pred = dit(img=x_t.to(weight_dtype),
                                 img_ids=inp['img_ids'].to(weight_dtype),
